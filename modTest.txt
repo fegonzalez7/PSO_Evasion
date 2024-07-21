@@ -1,0 +1,18 @@
+MODULE Module1
+
+CONST robtarget p1 := [ [500, -150, 300], [0, 0, 1, 0], [-1, -1, -1, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9] ];
+CONST robtarget p2 := [ [500, -300, 300], [0, 0, 1, 0], [-1, 0, -1, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9] ];
+CONST robtarget p3 := [ [400, -400, 300], [0, 0, 1, 0], [-1, 0, -1, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9] ];
+
+PROC main() 
+! Main 
+ENDPROC
+
+PROC traj1() 
+! Trayectoria 
+MoveJ p1,v200,z0,tool1\WObj:=wobj0;
+MoveL p2,v100,z0,tool1\WObj:=wobj0;
+MoveL p3,v100,z0,tool1\WObj:=wobj0;
+ENDPROC
+
+ENDMODULE
